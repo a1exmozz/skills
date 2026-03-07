@@ -1,0 +1,32 @@
+{
+  "name": "a1exmozz",
+  "owner": {
+    "name": "a1exmozz",
+    "email": "contact@a1exmozz.com"
+  },
+  "metadata": {
+    "version": "1.0.0",
+    "description": "Software engineering plugins published from github.com/a1exmozz/skills"
+  },
+  "plugins": [
+    {
+      "name": "a1exmozz-skills",
+      "description": "Software engineering skills for code review, correctness, and related development work",
+      "source": "./",
+      "author": {
+        "name": "a1exmozz",
+        "email": "contact@a1exmozz.com"
+      },
+      "homepage": "https://github.com/a1exmozz/skills",
+      "repository": "https://github.com/a1exmozz/skills",
+      "license": "MIT",
+      "keywords": [
+        "agent-skills",
+        "software-engineering",
+        "code-review",
+        "correctness"
+      ],
+      "category": "development"
+    }
+  ]
+}
