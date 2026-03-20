@@ -14,8 +14,8 @@ Keep skill content in the skill directory. Packaging files should reference it, 
 ## Validation
 
 - Main local gate: `./scripts/validate-local.sh`
-- Claude plugin: `claude plugin validate .`
 - Agent Skills: `skills-ref validate <skill-dir>`
+- Claude plugin: `claude plugin validate .`
 - Hook install: `./scripts/install-git-hooks.sh`
 
 ## Writing style

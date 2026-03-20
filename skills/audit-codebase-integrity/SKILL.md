@@ -1,21 +1,11 @@
 ---
-name: code-correctness
-description: "Review code against 19 reference files. Run one pass per reference. Emit one report per reference."
-license: MIT
-compatibility: "Designed for Agent Skills-compatible coding agents that can inspect repositories and read referenced markdown files."
-metadata:
-  author: a1exmozz
-  version: "1.0.0"
+name: audit-codebase-integrity
+description: "Structured 19-area integrity audit for subtle bugs, design flaws and operational correctness risks. Run after incidents or refactors, before merging large branches or as a periodic health check."
 ---
 
-# Correctness
+# Codebase Integrity Audit
 
-Run the review once per reference file. Do not merge lenses.
-
-## Scope
-
-1. If the user names files or directories, use that scope.
-2. Otherwise review the whole codebase.
+- If the user names files or directories, use that scope. Otherwise review the entire codebase.
 
 ## References
 
@@ -41,24 +31,21 @@ Run the review once per reference file. Do not merge lenses.
 
 ## Process
 
-1. Pick the review scope.
-2. Read one reference file.
-3. Review the chosen scope only against that reference.
-4. Repeat for every reference file in order.
-5. Keep each reference as its own report.
-6. If a reference has nothing material, write `No findings`.
+1. Read one reference file.
+2. Review the chosen scope against that reference.
+3. Repeat for every reference in order.
 
 ## Output
 
-Emit one section per reference, in the same order as the list above.
+- Emit one section per reference.
 
-Each section must include:
+### For each section, include:
 
-- `Reference:` the reference title
-- `Scope checked:` files, directories, or areas reviewed for that reference
-- `Result:` findings or `No findings`
+- `Reference:` the reference title.
+- `Scope checked:` files and directories reviewed for that reference.
+- `Result:` the findings or "No findings".
 
-For each finding, include:
+### For each finding, include:
 
 - what is wrong
 - evidence

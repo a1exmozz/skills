@@ -9,7 +9,7 @@ Portable software engineering skills for tools that support the [Agent Skills](h
 npx skills add a1exmozz/skills --list
 
 # Install one skill
-npx skills add a1exmozz/skills --skill code-correctness
+npx skills add a1exmozz/skills --skill audit-codebase-integrity
 ```
 
 This installs into the right skills directory for the target agent. For supported agents and install targets, see [`npx skills add --help`](https://github.com/vercel-labs/skills).
@@ -35,7 +35,7 @@ This repo is also published as a Claude Code plugin and as a self-hosted marketp
 This exposes the skills under the plugin namespace:
 
 ```text
-/a1exmozz-skills:code-correctness [scope]
+/a1exmozz-skills:audit-codebase-integrity [scope]
 ```
 
 ## Local validation
@@ -60,7 +60,7 @@ To install the repo hook:
 
 | Skill | Description |
 |---|---|
-| [code-correctness](skills/code-correctness/) | Correctness review across 19 focused lenses covering data, contracts, timing, tests, state, reliability, failure handling, security, caches, migrations, and time/locale behavior. |
+| [audit-codebase-integrity](skills/audit-codebase-integrity/) | Integrity audit across 19 focused lenses covering data, contracts, timing, tests, state, reliability, failure handling, security, caches, migrations and time/locale behavior. |
 
 ## License
 
