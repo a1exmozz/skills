@@ -7,15 +7,13 @@ Guidelines for AI agents working in this repository.
 - User-facing overview: `README.md`
 - Maintainer / contributor / agent notes: this file
 - Skills: `skills/<name>/`
-- Claude plugin packaging: `.claude-plugin/`
 
-Keep skill content in the skill directory. Packaging files should reference it, not restate it.
+Keep skill content in the skill directory.
 
 ## Validation
 
 - Main local gate: `./scripts/validate-local.sh`
 - Agent Skills: `skills-ref validate <skill-dir>`
-- Claude plugin: `claude plugin validate .`
 - Hook install: `./scripts/install-git-hooks.sh`
 
 ## Writing style

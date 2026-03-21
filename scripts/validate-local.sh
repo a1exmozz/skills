@@ -13,14 +13,10 @@ require_cmd() {
   fi
 }
 
-require_cmd claude
 require_cmd skills-ref
 
 echo "==> Validate reference index"
 bash ./scripts/validate-reference-index.sh
-
-echo "==> Validate Claude plugin packaging"
-claude plugin validate .
 
 echo "==> Validate Agent Skills"
 found=0

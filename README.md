@@ -14,30 +14,6 @@ npx skills add a1exmozz/skills --skill audit-codebase-integrity
 
 This installs into the right skills directory for the target agent. For supported agents and install targets, see [`npx skills add --help`](https://github.com/vercel-labs/skills).
 
-## Install as a Claude Code plugin
-
-This repo is also published as a Claude Code plugin and as a self-hosted marketplace.
-
-### From GitHub
-
-```text
-/plugin marketplace add a1exmozz/skills
-/plugin install a1exmozz-skills@a1exmozz
-```
-
-### From a local checkout
-
-```text
-/plugin marketplace add ./path/to/skills
-/plugin install a1exmozz-skills@a1exmozz
-```
-
-This exposes the skills under the plugin namespace:
-
-```text
-/a1exmozz-skills:audit-codebase-integrity [scope]
-```
-
 ## Local validation
 
 ```bash
@@ -46,9 +22,8 @@ This exposes the skills under the plugin namespace:
 
 This runs:
 
-- reference index validation: `scripts/validate-reference-index.sh`.
-- Claude plugin packaging validation
-- agent Skills validation for every skill under `skills/`
+- reference index validation: `scripts/validate-reference-index.sh`
+- Agent Skills validation for every skill under `skills/`
 
 To install the repo hook:
 
