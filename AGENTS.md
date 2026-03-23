@@ -6,7 +6,7 @@ Guidelines for AI agents working in this repository.
 
 - User-facing overview: `README.md`
 - Maintainer / contributor / agent notes: this file
-- Skills: `skills/<name>/`
+- Skills: `skills/<name>/` or `skills/<group>/<name>/`
 
 Keep skill content in the skill directory.
 

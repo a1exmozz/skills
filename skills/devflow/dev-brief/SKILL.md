@@ -1,5 +1,5 @@
 ---
-name: brief
+name: dev-brief
 description: "Structured discovery process for starting new work. Aligns on goals, success criteria, and key design decisions through a two-phase interview: goal clarification then systematic resolution of design questions with options, tradeoffs and recommendations. Use when kicking off a new project or feature."
 ---
 
@@ -29,4 +29,4 @@ description: "Structured discovery process for starting new work. Aligns on goal
 ## Output
 
 1. _After_ completing the above, produce the `Brief` using the template [here](./references/brief-template.md)
-2. Show the completed `Brief` in full.
+2. Save the completed `Brief` to `devflow/dev-brief.md` in the repository root. Create the directory if it doesn't exist.

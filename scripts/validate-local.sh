@@ -20,13 +20,12 @@ bash ./scripts/validate-reference-index.sh
 
 echo "==> Validate Agent Skills"
 found=0
-for dir in skills/*; do
-  if [ -d "$dir" ] && [ -f "$dir/SKILL.md" ]; then
-    found=1
-    echo "Validating $dir"
-    skills-ref validate "$dir"
-  fi
-done
+while IFS= read -r skill_md; do
+  dir="$(dirname "$skill_md")"
+  found=1
+  echo "Validating $dir"
+  skills-ref validate "$dir"
+done < <(find skills -name SKILL.md -type f)
 
 if [ "$found" -eq 0 ]; then
   echo "ERROR: no skill directories found under skills/" >&2

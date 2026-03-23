@@ -10,11 +10,8 @@ trap 'rm -rf "$tmp_dir"' EXIT
 found=0
 failed=0
 
-for skill_dir in skills/*; do
-  [ -d "$skill_dir" ] || continue
-
-  skill_md="$skill_dir/SKILL.md"
-  [ -f "$skill_md" ] || continue
+while IFS= read -r skill_md; do
+  skill_dir="$(dirname "$skill_md")"
 
   found=1
 
@@ -24,8 +21,11 @@ for skill_dir in skills/*; do
   echo "Checking reference index for $skill_name"
 
   if [ ! -d "$refs_dir" ]; then
-    echo "ERROR: $skill_name has SKILL.md but no references directory at $refs_dir" >&2
-    failed=1
+    # Skills without references/ and without reference links are valid (e.g. index skills)
+    if grep -qE '\./references/[^)]*\.md' "$skill_md"; then
+      echo "ERROR: $skill_name has reference links in SKILL.md but no references directory at $refs_dir" >&2
+      failed=1
+    fi
     continue
   fi
 
@@ -78,7 +78,7 @@ for skill_dir in skills/*; do
       failed=1
     fi
   done < "$actual_tmp"
-done
+done < <(find skills -name SKILL.md -type f)
 
 if [ "$found" -eq 0 ]; then
   echo "ERROR: no skill directories with SKILL.md found under skills/" >&2

@@ -55,12 +55,9 @@
 4. Calling new behavior a refactor.
 5. Testing internals instead of observable behavior.
 6. New test passes immediately: the behaviour already exists or the test is wrong.
-
-## Loop summary
-
-1. Pick one behavior.
-2. Write one failing test.
-3. Make it pass with the minimum code.
-4. Commit.
-5. Refactor if needed, while green.
-6. Repeat.
+7. Skipping a test because the behavior appears hard to test. Instead:
+   - Test what your code **produces** (return values, output, state changes visible through the public API) rather than what an external system does with it.
+   - Test through a **higher-level caller** that consumes this behavior and produces observable results.
+   - Test through the system's **supported external interface** (API endpoint, CLI invocation, public method) when the behavior is only observable at that level.
+   - If none of these work, the behavior genuinely cannot be tested (but that is rare). State why in a code comment in a `TODO:`
+8. An issue has multiple acceptance criteria but you wrote one test and implemented everything at once.
