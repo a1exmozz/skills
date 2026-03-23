@@ -35,7 +35,12 @@ To install the repo hook:
 
 | Skill | Description |
 |---|---|
-| [audit-codebase-integrity](skills/audit-codebase-integrity/) | Integrity audit across 19 focused lenses covering data, contracts, timing, tests, state, reliability, failure handling, security, caches, migrations and time/locale behavior. |
+| [audit-codebase-integrity](skills/audit-codebase-integrity/) | Structured 19-area integrity audit for subtle bugs, design flaws and operational correctness risks. |
+| [brief](skills/brief/) | Structured discovery process for starting new work. Aligns on goals, success criteria and key design decisions. |
+| [map](skills/map/) | Turns a Brief into a domain-driven design Map: ubiquitous language, subdomains, bounded contexts and key domain flows. |
+| [plan](skills/plan/) | Turns a Map into a Plan using dependency-aware thin vertical implementation slices. |
+| [raise](skills/raise/) | Turns a Plan into dependency-aware beads issues. |
+| [ship](skills/ship/) | Implement beads issues using test-driven development. |
 
 ## License
 
