@@ -7,7 +7,7 @@ description: "Turns a Plan into dependency-aware beads issues. Use after 'dev-pl
 
 ## Input
 
-1. If there is no `Plan` at `devflow/dev-plan.md` in the repository root. Ask for the completed `Plan`.
+1. If there is no `Plan` at `.devflow/dev-plan.md` in the repository root. Ask for the completed `Plan`.
 2. _After_ receiving the `Plan`, read the [cheat sheet](./references/beads-cheat-sheet.md) to understand how beads works.
 3. Read the rules below for how we will convert the `Plan` into beads issues.
 

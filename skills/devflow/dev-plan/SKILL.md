@@ -7,13 +7,13 @@ description: "Turns a Map into a Plan using dependency-aware thin vertical imple
 
 ## Input
 
-1. If there is no `Map` at `devflow/dev-map.md` in the repository root. Ask for the completed `Map`.
+1. If there is no `Map` at `.devflow/dev-map.md` in the repository root. Ask for the completed `Map`.
 
 ## Output
 
 1. _After_ receiving the `Map`, produce the `Plan` using the template [here](./references/plan-template.md). Filling in every section, including all [placeholder text].
-2. Save the completed `Plan` to `devflow/dev-plan.md` in the repository root.
+2. Save the completed `Plan` to `.devflow/dev-plan.md` in the repository root.
 
 ### Questions
 
-1. _If_ any unresolved ambiguity would change slice boundaries, dependencies or acceptance criteria: ask about it. Otherwise, give the user a link to the `Plan`
+1. _If_ any unresolved ambiguity would change slice boundaries, dependencies or acceptance criteria: ask about it. Otherwise, give the user a link to the `Plan` and provide a concise summary of it.
