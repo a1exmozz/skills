@@ -4,7 +4,7 @@
 
 ### 1.1 Shared Terms
 
-_List terms that must mean the same thing everywhere._
+_Terms that must mean the same thing within a bounded context, unless explicitly redefined in another context._
 
 - [Term]: [exact domain meaning]
 - ...
@@ -46,7 +46,7 @@ _A subdomain is a meaningful part of the problem space._
 
 ### 2.2 Bounded Contexts
 
-_A bounded context is a clear boundary around one model, its language, and what it owns._
+_A bounded context is a clear boundary around a specific model and language, including the responsibilities it owns in the system._
 
 #### Context: [Bounded Context Name]
 
@@ -173,12 +173,12 @@ _Objects defined by meaning, not identity._
 
 _Domain logic that does not fit naturally on one entity or value object._
 
-- [Service] — [stateless domain responsibility]
+- [Service] — [domain responsibility. usually stateless]
 - ...
 
 #### Repositories
 
-_How aggregates are loaded and saved._
+_How aggregate roots are retrieved and persisted._
 
 - [Repository] — [what aggregate(s) it loads / persists]
 - ...
@@ -194,7 +194,7 @@ _Important things that happened in the domain._
 
 _Which rules must hold immediately, and which can settle later._
 
-- Rules that must always hold inside this context:
+- Rules that must always hold within a consistency boundary:
   - [Rule]
   - ...
 - Cross-aggregate or cross-context rules that may be eventually consistent:
